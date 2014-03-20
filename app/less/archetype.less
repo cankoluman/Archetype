@@ -1,317 +1,302 @@
 ﻿.archetypeEditor {
-    width: 98%;
-}
-
-.archetypeEditor fieldset{
-    border: 1px solid #dddddd;
-    padding: 0;
-    margin-bottom: 5px;
-    background-color: #f1f1f1;
-    clear: both;
-    display: inline-block;
     width: 100%;
-}
 
-.archetypeEditor .archetypeFieldsetLabel {
-    position: relative;
-    width: 100%%;
-
-    .label-sub {
-        padding: 8px 0;
+    fieldset {
+        border: 1px solid #dddddd;
+        padding: 0;
+        margin-bottom: 5px;
+        background-color: #f1f1f1;
+        clear: both;
         display: inline-block;
-        &.module-label {
+        width: 100%;
+    }
+    .archetypeFieldsetLabel {
+        position: relative;
+        width: 100%%;
+
+        .label-sub {
+            padding: 8px 0;
+            display: inline-block;
+        }
+
+        .label-sub.module-label {
             width: 100%;
         }
-    }
 
-    span {
-        font-weight: bold;
-    }
-
-    label:hover {
-        cursor: default;
-    }
-
-    &.enableCollapsing:hover {
-        cursor: pointer;
-
-        label  {
-            span { 
-                text-decoration: underline;
-            }
-            &:hover {
-                cursor: pointer;
-            }
+        span {
+            font-weight: bold;
         }
-    }
 
-    .caret {
-        margin: 8px 1px 0 15px;
+        label:hover {
+            cursor: default;
+        }
 
-        &.caret-right {
+        .caret {
+            margin: 8px 1px 0 15px;
+        }
+
+        .caret.caret-right {
             border-bottom: 4px solid transparent;
             border-top: 4px solid transparent;
             border-left: 4px solid #000000;
             content: "";
             margin-top: 6px;
         }
-    }
 
-    label{
-        margin-bottom: 0;
-        margin-left: 5px;
-        padding: 0;
-        span {
-            display: inline-block;
-        }
-    }
-}
+        label {
+            margin-bottom: 0;
+            margin-left: 5px;
+            padding: 0;
 
-.archetypeEditor .archetypeCollapser{
-    clear: both;
-    height: 100%;
-    padding-top: 12px;
-    background-color: #fff;
-    border-top: 1px solid silver;
-    border-radius: 0 0 0 5px;
-}
-
-.archetypeEditor .multiPropertyTextbox{
-    margin-bottom: 3px;
-}
-
-.archetypeEditor ul{
-    list-style: none;
-    margin-left: 0;
-}
-
-.archetypeEditor,
-.archetypeConfig {
-    .archetypeEditorControls {
-        float: right;
-
-        i {
-            cursor: pointer;
-            &.handle {
-                cursor: move;
+            span {
+                display: inline-block;
             }
         }
     }
+    .archetypeFieldsetLabel.enableCollapsing:hover {
+        cursor: pointer;
+
+        label span {
+            text-decoration: underline;
+        }
+
+        label:hover {
+            cursor: pointer;
+        }
+    }
+
+    .archetypeCollapser {
+        clear: both;
+        height: 100%;
+        padding-top: 12px;
+        background-color: #fff;
+        border-top: 1px solid silver;
+        border-radius: 0 0 0 5px;
+    }
+
+    .multiPropertyTextbox {
+        margin-bottom: 3px;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    .archetypeEditorControls {
+        float: none;
+        position: absolute;
+        right: 15px;
+        top: 0;
+    }
+
+    form {
+        margin-left: 20px;
+
+        .control-label {
+            padding-top: 0 !important;
+        }
+    }
+
+    .archetypeProperty {
+        clear: both;
+        overflow: hidden;
+        margin-top: 3px;
+
+        label span {
+            color: #343434;
+        }
+    }
+
+    .archetypeDeveloperModel {
+        font-family: monospace;
+        width: 98%;
+        min-height: 100px;
+        margin-bottom: 10px;
+        border: 1px solid red;
+    }
+
+    .archetypeFieldsetToolbar {
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        li {
+            float: left;
+            padding: 2px 4px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    }
+
+    .archetypeFieldsetHeaderText,
+    .archetypeFieldsetFooterText,
+    .archetypeFieldsetHelpText {
+        clear: both;
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    .archetypeFieldsetError {
+        border: 1px solid #b94a48;
+    }
+
+    .archetypePropertyError {
+        margin-bottom: 5px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+        label span {
+            color: #b94a48;
+            font-weight: bold;
+        }
+    }
+
+    .show-validation.ng-invalid .control-group.error .control-label span {
+        color: #343434;
+    }
 }
 
-.archetypeEditor .archetypeEditorControls {
-    float: none;
-    position: absolute;
-    right: 15px;
-    top: 0;
-}
-
+.archetypeEditor .archetypeEditorControls,
 .archetypeConfig .archetypeEditorControls {
     float: right;
-}
 
-.archetypeEditor form {
-    margin-left:20px;
-
-    .control-label {
-        padding-top: 0 !important;
-    }
-}
-
-.archetypeEditor .archetypeProperty{
-    clear: both;
-    overflow: hidden;
-    margin-top: 3px;
-}
-
-.archetypeEditor .archetypeDeveloperModel
-{
-    font-family: monospace;
-    width: 98%;
-    min-height: 100px;
-    margin-bottom: 10px;
-    border: 1px solid red;
-}
-
-.archetypeEditor .archetypeFieldsetToolbar {
-    margin-bottom: 10px;
-    overflow: hidden;
-
-    li {
-        float: left;
-        padding: 2px 4px;
-        margin-right: 10px;
-        border: 1px solid #ddd;
+    i {
         cursor: pointer;
+
+        &.handle {
+            cursor: move;
+        }
     }
-}
-
-.archetypeEditor .archetypeFieldsetHeaderText{
-    clear:both;
-    margin-bottom: 3px;
-    font-size: 12px;
-}
-
-.archetypeEditor .archetypeFieldsetFooterText{
-    clear:both;
-    margin-bottom: 3px;
-    font-size: 12px;
-}
-
-.archetypeEditor .archetypeFieldsetHelpText{
-    clear:both;
-    margin-bottom: 3px;
-    font-size: 12px;
 }
 
 .archetypeConfig {
     margin-bottom: 20px;
-}
 
-.archetypeConfig ul{
-    list-style: none;
-}
-
-.archetypeConfig li{
-    background-color: #fff;
-}
-
-.archetypeConfig label{
-    width: 120px;
-}
-
-.archetypeConfig .archetypeFieldsetWrapper{
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.archetypeConfig .archetypeFieldsetOption{
-    margin-bottom: 15px;
-    input[type=text]{
-        max-width: 300px;
+    .archetypeEditorControls {
+        float: right;
     }
-}
-
-.archetypeConfig .archetypeDeveloperModel {
-    font-family: monospace;
-    width: 88%;
-    margin: 5px 10px 10px;
-    height: 130px;
-}
-
-.archetypeConfig .archetypePropertiesWrapper {
-    border: 1px solid #ddd;
-    padding: 8px;
-    margin: -40px 10px 10px 140px;
-    max-width: 475px;
 
     ul {
-        padding: 0;
-        margin: 0;
+        list-style: none;
     }
 
     li {
+        background-color: #fff;
+    }
+
+    label {
+        width: 120px;
+    }
+
+    .archetypeFieldsetWrapper {
+        border: 1px solid #ccc;
         padding: 10px;
         margin-bottom: 10px;
-        background-color: #eee;
+    }
+
+    .archetypeFieldsetOption {
+        margin-bottom: 15px;
 
         input[type=text] {
-            max-width: 190px;
-            width: auto;
-        }
-
-        select {
-            max-width: 160px;
+            max-width: 300px;
         }
     }
 
-    li:last-child {
-        margin-bottom: 0;
+    .archetypeDeveloperModel {
+        font-family: monospace;
+        width: 88%;
+        margin: 5px 10px 10px;
+        height: 130px;
     }
-}
 
-.archetypeConfig .archetypeFieldsets {
-    margin-left: 0;
-}
+    .archetypePropertiesWrapper {
+        border: 1px solid #ddd;
+        padding: 8px;
+        margin: -40px 10px 10px 140px;
+        max-width: 475px;
 
-.archetypeConfig .archetypeFieldsetTitle {
-    cursor: pointer;
-    overflow: hidden;
-}
+        ul {
+            padding: 0;
+            margin: 0;
+        }
 
-.archetypeConfig .archetypeOptions label{
-    width: 400px;
-}
+        li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #eee;
 
-.archetypeConfig .archetypeAdvancedOptions {
-    margin-top: 15px;
-    div {
-        margin-bottom: 10px;
-    }
-    label {
-        width: 400px;
-    }
-}
+            input[type=text] {
+                max-width: 190px;
+                width: auto;
+            }
 
-.archetypeConfig .archetypeMaxFieldsets{
-    border: 1px solid #ddd;
-    width: 40px;
-    text-align: right;
-}
+            select {
+                max-width: 160px;
+            }
+        }
 
-.archetypeConfig .archetypePropertyTitle {
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.archetypeConfig .archetypePropertyCollapser{
-    margin-top: 10px;
-    div {
-        margin-bottom: 10px;
-    }
-}
-
-.archetypeEditor .archetypeFieldsetError{
-    border: 1px solid #b94a48;
-}
-
-.archetypeEditor .archetypeProperty {
-    label {
-        span {
-            color: #343434;
+        li:last-child {
+            margin-bottom: 0;
         }
     }
-}
-.archetypeEditor .archetypePropertyError{
-    margin-bottom: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
 
-    label {
+    .archetypeFieldsets {
+        margin-left: 0;
+    }
 
-        span {
-            color: #b94a48;
-            font-weight: bold;
+    .archetypeFieldsetTitle {
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .archetypeOptions {
+        label {
+            width: 400px;
         }
+    }
+
+    .archetypeAdvancedOptions {
+        margin-top: 15px;
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            width: 400px;
+        }
+    }
+
+    .archetypeMaxFieldsets {
+        border: 1px solid #ddd;
+        width: 40px;
+        text-align: right;
+    }
+
+    .archetypePropertyTitle {
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .archetypePropertyCollapser {
+        margin-top: 10px;
+
+        div {
+            margin-bottom: 10px;
+        }
+    }
+
+    .archetypeFieldsetCollapser {
+        margin-top: 15px;
+    }
+
+    .fieldsetIcon {
+        margin-right: 10px;
     }
 }
 
 .ui-sortable-placeholder {
     visibility: visible !important;
-    background-color:   #d0e7f1 !important;
-}
-
-.archetypeConfig .archetypeFieldsetCollapser {
-    margin-top: 15px;
-}
-
-.archetypeConfig .fieldsetIcon {
-    margin-right: 10px;
-}
-
-.archetypeEditor .show-validation.ng-invalid .control-group.error .control-label {
-    span {
-        color: #343434;
-    }
+    background-color: #d0e7f1 !important;
 }
