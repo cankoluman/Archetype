@@ -72,6 +72,13 @@ namespace Archetype.Umbraco.PropertyConverters
                                     {
                                         propertyInst.DataTypeId = GetDataTypeByGuid(property.DataTypeGuid).Id;
                                         propertyInst.PropertyEditorAlias = property.PropertyEditorAlias;
+
+                                        if (propertyInst.Value is long)
+                                        {
+                                            var attempt = propertyInst.Value.TryConvertTo<int>();
+                                            if (attempt.Success)
+                                                propertyInst.Value = (int) attempt.Result;
+                                        }
                                     }
                                 }
                             }
