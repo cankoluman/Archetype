@@ -1,6 +1,5 @@
 ﻿using System;
 using Archetype.Tests.Serialization.Base;
-using Archetype.PropertyConverters;
 using Newtonsoft.Json;
 using NUnit.Framework;
 
